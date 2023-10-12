@@ -53,6 +53,7 @@ app.post("/api/upload",upload.single("file"),(req,res)=>{
     res.status(200).json("Image has been uploaded successfully!")
 })
 
+
 const SECRET = process.env.JWT_SECRET
 const port = process.env.PORT || 5000; // Use the environment port or 5000 as a fallback
 
