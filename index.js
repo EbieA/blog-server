@@ -43,13 +43,15 @@ const storage=multer.diskStorage({
     },
     filename:(req,file,fn)=>{
         fn(null,req.body.img)
-        // fn(null,"image1.jpg")
     }
 })
 
+app.get("/api", (req, res) => {
+    res.json({ message: "Welcome to the API route!" });
+  });
+
 const upload=multer({storage:storage})
 app.post("/api/upload",upload.single("file"),(req,res)=>{
-    // console.log(req.body)
     res.status(200).json("Image has been uploaded successfully!")
 })
 
