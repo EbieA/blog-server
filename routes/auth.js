@@ -4,7 +4,6 @@ const User=require('../models/User')
 const bcrypt=require('bcrypt')
 const jwt=require('jsonwebtoken')
 
-
 //REGISTER
 router.post("/register",async(req,res)=>{
     try{
